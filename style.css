@@ -1,0 +1,166 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Source+Sans+Pro:ital,wght@1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+    .top {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1vh;
+    }
+    
+    body,
+    .labels,
+    .inputs {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: rgb(27, 29, 34);
+    }
+    
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: url();
+        font-size: 12px;
+        background-color: rgb(233, 233, 233);
+        fill: rgb(27, 29, 34);
+    }
+    
+    body.dark {
+        background-color: rgb(27, 29, 34);
+        color: rgb(218, 218, 218);
+        fill: rgb(233, 233, 233);
+    }
+    
+    form,
+    .table {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 10vh;
+    }
+    
+    label,
+    input,
+    button {
+        margin: 1vh;
+        font-family: 'Source Sans Pro', sans-serif;
+        border-radius: 1vh;
+        height: 12px;
+    }
+    
+    p,
+    input::placeholder {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 12px;
+        text-align: center;
+        color: rgb(46, 46, 46);
+    }
+    
+    p {
+        margin: 1vh;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    button {
+        background: rgb(27, 29, 34);
+        border-style: none;
+        color: white;
+        height: max-content;
+        font-size: 12px;
+    }
+    
+    form {
+        padding: 1vh;
+        border-radius: 1vh;
+        background-color: rgba(51, 56, 66, 0.1);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(15px);
+    }
+    
+    .table {
+        padding: 1vh;
+        border-radius: 1vh;
+        background-color: rgba(51, 56, 66, 0.1);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(15px);
+        width: 181.31px;
+    }
+    /*switch https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 42px;
+        height: 16px;
+    }
+    
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(46, 46, 46);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 8px;
+        width: 8px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked+.slider {
+        background-color: rgb(51, 56, 66);
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px rgb(51, 56, 66);
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+    
+    @media (min-width: 540px) {
+        body {
+            display: flex;
+        }
+    }
+    
+    @media (max-width: 540px) {
+        body {
+            display: grid;
+        }
+    }
